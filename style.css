@@ -1,3 +1,4 @@
+/* Global CSS */
 * {
     margin: 0;
     padding: 0;
@@ -403,6 +404,12 @@ body.overlay {
     overflow: hidden;
 }
 
+.product-categories li a.active {
+    background: black;
+    color: white;
+}
+
+/* Media Queries */
 @media (max-width: 1440px) {
     nav li a {
         font-size: 14px;
