@@ -1,6 +1,7 @@
 $(function() {
     console.log('Working')
     let headerHeight = jQuery('header').outerHeight();
+
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > headerHeight) {
             $("header").addClass("active");
@@ -25,6 +26,12 @@ $(function() {
         $(this).toggleClass('active')
         $('.header-nav').toggleClass('active')
         $('body').toggleClass('overlay')
+    })
+
+    $('header li a').on('click', function() {
+        $('.mobile-menu').removeClass('active')
+        $('.header-nav').removeClass('active')
+        $('body').removeClass('overlay')
     })
     
 })
